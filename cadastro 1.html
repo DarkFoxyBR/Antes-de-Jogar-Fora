@@ -6,10 +6,8 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <header>
-        <nav class="h cadastro">
-            <h1>Antes de Jogar fora</h1>
-        </nav>
+    <header class="h cadastro">
+        <h1>Antes de Jogar fora</h1>
     </header>
 
     <main>
@@ -40,22 +38,22 @@
             cols="40"
             rows="10">
             </textarea>
-        </form>
+        
+            <label for="state">Estado de Consevação</label><br>
+            <input type="radio"
+            name="state" id="new">
+            <label for="new">Novo</label><br>
 
-        <label for="state">Estado de Consevação</label><br>
-        <input type="radio"
-        name="state" id="new">
-        <label for="new">Novo</label><br>
+            <input type="radio"
+            name="state" id="ok">
+            <label for="ok">Semi-novo/Usado</label><br>
 
-        <input type="radio"
-        name="state" id="ok">
-        <label for="ok">Semi-novo/Usado</label><br>
+            <input type="radio"
+            name="state" id="bad">
+            <label for="bad">Precisa de Reparos</label><br>
 
-        <input type="radio"
-        name="state" id="bad">
-        <label for="bad">Precisa de Reparos</label><br>
-
-        <button type="button"><a href="">Próximo Passo</a></button>
+            <button type="button"><a href="cadastro 2.html">Próximo Passo</a></button>
+        </form>    
     </main>
 
     <footer>
