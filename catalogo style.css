@@ -23,15 +23,6 @@ header p {
     margin: 20px;
 }
 
-header nav {
-    background-color: #020e0e;
-    border-radius: 10px;
-    border: solid 1px #05614b;
-    text-align: center;
-    margin: 10px;
-    padding: 10px;
-}
-
 li {
     list-style-type: none;
 }
