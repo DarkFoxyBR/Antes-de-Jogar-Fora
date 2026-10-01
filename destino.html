@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha o Destino</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="modal-container">
+        <!-- CABEÇALHO DA MODAL -->
+        <header class="modal-header">
+            <button type="button" class="btn-close" aria-label="Fechar">✕</button>
+            <h1 class="logo-title">Antes de Jogar Fora</h1>
+            <button type="button" class="btn-help" aria-label="Ajuda">?</button>
+        </header>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="modal-content">
+            <div class="instructions">
+                <h2>O que você deseja fazer com este item?</h2>
+                <p>Escolha o melhor destino para o seu produto. Nossa comunidade valoriza a sustentabilidade e o consumo consciente.</p>
+            </div>
+
+            <!-- FORMULÁRIO COM OS CARDS DE SELEÇÃO -->
+            <form action="#" method="POST" id="form-destino">
+                
+                <!-- CARD 1: DOAR -->
+                <label class="destination-card" for="donate">
+                    <input type="radio" name="final_destination" id="donate" value="doar" required>
+                    <div class="card-custom-box">
+                        <div class="card-icon">🤝</div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <h3>Doar</h3>
+                                <span class="badge grey">Sem taxas</span>
+                            </div>
+                            <p>Encontre alguém que precisa. Ajude a comunidade local doando itens em bom estado diretamente pelo app.</p>
+                            <div class="card-footer-info">
+                                <span class="info-avatar-text">👥 +12 pessoas buscando móveis próximos</span>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+
+                <!-- CARD 2: VENDER -->
+                <label class="destination-card" for="sell">
+                    <input type="radio" name="final_destination" id="sell" value="vender">
+                    <div class="card-custom-box">
+                        <div class="card-icon">🏷️</div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <h3>Vender</h3>
+                                <span class="badge orange">Taxa de 5% ✔</span>
+                            </div>
+                            <p>Recupere parte do valor investido. O processo é rápido, seguro e gerenciamos todo o pagamento para você.</p>
+                            <div class="card-footer-info highlight">
+                                <span>💰 O valor médio de venda para itens similares é de R$ 150 - R$ 300.</span>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+
+                <!-- CARD 3: RECICLAR -->
+                <label class="destination-card" for="recycle">
+                    <input type="radio" name="final_destination" id="recycle" value="reciclar">
+                    <div class="card-custom-box">
+                        <div class="card-icon">♻️</div>
+                        <div class="card-body">
+                            <div class="card-header-row">
+                                <h3>Reciclar</h3>
+                                <span class="badge grey">Ecopontos</span>
+                            </div>
+                            <p>Descarte corretamente. Se o item não tem mais conserto, indicaremos os pontos de coleta seletiva mais próximos de você.</p>
+                            
+                            <!-- Miniatura do Mapa simulada por CSS/Imagens -->
+                            <div class="map-placeholder">
+                                <div class="map-badge">📍 3 pontos próximos encontrados</div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+
+            </form>
+        </main>
+
+        <!-- RODAPÉ DE AÇÕES -->
+        <footer class="modal-footer">
+            <button type="button" class="btn-secondary" onclick="window.history.back()">Voltar</button>
+            <button type="submit" form="form-destino" class="btn-primary">Continuar ➔</button>
+        </footer>
+    </div>
+
+</body>
+</html>
