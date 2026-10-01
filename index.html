@@ -1,50 +1,396 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Antes de Jogar Fora</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
+
+    <!-- CABEÇALHO -->
     <header>
-        <h1>Antes de Jogar Fora</h1>
-        <h2>Antes de Jogar Fora, dê uma nova chance.</h2>
-        <p>O que não serve mais para você pode ser exatamente o que outra pessoa precisa. Escolha o destinos responsável para seu itens.</p>
-        <nav>
-            <ul class="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="cadastro 1.html">Cadastrar</a></li>
-                <li><a href="">Perfil</a></li>
-            </ul>
+
+        <div class="logo">
+            <i class="fa-solid fa-recycle"></i>
+            <h1>Antes de Jogar Fora</h1>
+        </div>
+
+        <nav class="menu">
+            <a href="#" class="ativo">
+                <i class="fa-solid fa-house"></i>
+                Início
+            </a>
+
+            <a href="cadastro1.html">
+                <i class="fa-solid fa-circle-plus"></i>
+                Cadastrar Item
+            </a>
+
+            <a href="#">
+                <i class="fa-regular fa-user"></i>
+                Perfil
+            </a>
+
+            <a href="#">
+                <i class="fa-regular fa-bell"></i>
+            </a>
         </nav>
+
     </header>
 
+
+    <!-- CONTEÚDO PRINCIPAL -->
     <main>
-        <section class="home">
-            <h3>Categorias</h3>
-            <ul class="catalog li">
-                <li><a href="">Eletrônicos</a></li>
-                <li><a href="">Eletrodomésticos</a></li>
-                <li><a href="">Móveis</a></li>
-                <li><a href="">Roupas</a></li>
-                <li><a href="">Livros</a></li>
-                <li><a href="">Brinquedos</a></li>
-                <li><a href="">Outros</a></li>
-            </ul>
-        </section>
 
-        <section class="iten">
-            <h3>Itens Recentes</h3>
-            <a href="catalogo.html" class="explorer">Ver Todos</a>
-            <!--Adicionar Imagens-->
+        <!-- APRESENTAÇÃO -->
+        <section class="apresentacao">
+
+            <h2>
+                Antes de jogar fora,<br>
+                <span>dê uma nova chance.</span>
+            </h2>
+
+            <p>
+                O que não serve mais para você pode ser exatamente
+                o que outra pessoa precisa. Escolha o melhor destino 
+                para seus itens.
+            </p>
 
         </section>
+
+
+        <!-- CATEGORIAS -->
+        <section id="categorias" class="categorias">
+
+            <h2>Categorias</h2>
+
+            <div class="lista-categorias">
+
+                <button class="categoria">
+                    <div class="icone">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <span>Eletrônicos</span>
+                </button>
+
+                <button class="categoria">
+                    <div class="icone">
+                        <i class="fa-solid fa-mobile-screen"></i>
+                    </div>
+                    <span>Celulares</span>
+                </button>
+
+                <button class="categoria">
+                    <div class="icone">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <span>Móveis</span>
+                </button>
+
+                <button class="categoria">
+                    <div class="icone">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <span>Roupas</span>
+                </button>
+
+                <button class="categoria">
+                    <div class="icone">
+                        <i class="fa-solid fa-book-open"></i>
+                    </div>
+                    <span>Livros</span>
+                </button>
+
+                <button class="categoria">
+                    <div class="icone">
+                        <i class="fa-solid fa-car-side"></i>
+                    </div>
+                    <span>Brinquedos</span>
+                </button>
+
+                <button class="categoria">
+                    <div class="icone">
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <span>Outros</span>
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class="busca-area" aria-label="Buscar itens">
+            <div class="campo-busca">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Buscar itens, categorias ou localização" aria-label="Buscar itens" />
+            </div>
+        </section>
+
+
+        <!-- ITENS RECENTES -->
+        <section id="itens" class="itens">
+
+            <div class="titulo-itens">
+
+                <h2>Itens Recentes</h2>
+
+                
+
+            </div>
+
+
+            <div class="grid-itens">
+
+
+                <!-- ITEM 1 -->
+                <article class="card">
+
+                    <img src="fotos/vestido.jpeg"
+                         alt="Vestido">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes">
+
+                            <span class="tag roupas">roupas</span>
+
+
+                            <span class="distancia">
+                                <i class="fa-solid fa-location-dot"></i>
+                                2 km
+                            </span>
+
+                        </div>
+
+                        <h3>vestido em crepe duna</h3>
+                        <p class="preco">doação</p>
+
+
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 2 -->
+                <article class="card">
+
+                    <img src="fotos/foto de bike.jpeg"
+                         alt="Bicicleta">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes">
+
+                            <span class="tag esporte">
+                                Esporte
+                            </span>
+
+                            <span class="distancia">
+                                <i class="fa-solid fa-location-dot"></i>
+                                5 km
+                            </span>
+
+                        </div>
+
+                        <h3>Bicicleta Urbana Aro 26</h3>
+
+                        <p class="preco">R$ 350</p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 3 -->
+                <article class="card">
+
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794"
+                         alt="Livros">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes">
+
+                            <span class="tag livros">
+                                Livros
+                            </span>
+
+                            <span class="distancia">
+                                <i class="fa-solid fa-location-dot"></i>
+                                1.2 km
+                            </span>
+
+                        </div>
+
+                        <h3>Coleção Design Sustentável</h3>
+
+                        <p class="preco gratis">doação</p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 4 -->
+                <article class="card">
+
+                    <img src="fotos/notebook.jpeg"
+                         alt="Monitor">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes">
+
+                            <span class="tag eletronicos">
+                                Eletrônicos
+                            </span>
+
+                            <span class="distancia">
+                                <i class="fa-solid fa-location-dot"></i>
+                                8 km
+                            </span>
+
+                        </div>
+
+                        <h3>dell"</h3>
+
+                        <p class="preco">R$ 800</p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 5 -->
+                <article class="card">
+
+                    <img src="fotos/mesa de madeira.jpeg"
+                         alt="Mesa">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes">
+
+                            <span class="tag moveis">
+                                Móveis
+                            </span>
+
+                            <span class="distancia">
+                                <i class="fa-solid fa-location-dot"></i>
+                                3 km
+                            </span>
+
+                        </div>
+
+                        <h3>Mesa de Madeira</h3>
+
+                        <p class="preco">R$ 150</p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ITEM 6 -->
+                <article class="card">
+
+                    <img src="fotos/relogio2.jpeg"
+                         alt="Relógio">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes">
+
+                            <span class="tag eletronicos">
+                                Eletrônicos
+                            </span>
+
+                            <span class="distancia">
+                                <i class="fa-solid fa-location-dot"></i>
+                                4 km
+                            </span>
+
+                        </div>
+
+                        <h3>Relógio Digital</h3>
+
+                        <p class="preco">R$ 25</p>
+
+                    </div>
+
+                </article>
+
+                <!-- ITEM 7 -->
+                <article class="card">
+
+                    <img src="fotos/guitarra.jpeg"
+                         alt="guitarra">
+
+                    <div class="conteudo-card">
+
+                        <div class="informacoes">
+
+                            <span class="tag eletronicos">
+                                Eletrônicos
+                            </span>
+
+                            <span class="distancia">
+                                <i class="fa-solid fa-location-dot"></i>
+                                40 km
+                            </span>
+
+                        </div>
+
+                        <h3>Guitarra</h3>
+
+                        <p class="preco">R$ 2.500</p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
     </main>
 
+
+    <!-- RODAPÉ -->
     <footer>
-        <p>&copy 2026 CEEP HXV 2ºA Inf.</p>
+
+        <div class="footer-logo">
+
+            <i class="fa-solid fa-recycle"></i>
+
+            <h2>Antes de Jogar Fora</h2>
+
+        </div>
+
+        <p>
+            Dando uma nova chance para aquilo que ainda pode ser útil.
+        </p>
+
+        <p class="copyright">
+            © 2026 Antes de Jogar Fora
+        </p>
+
     </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
 
 </body>
 </html>
