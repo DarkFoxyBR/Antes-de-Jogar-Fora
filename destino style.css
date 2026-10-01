@@ -1,0 +1,279 @@
+/* ==========================================================================
+   Configurações Gerais e Reset
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a1a; /* Fundo escuro texturizado simulando a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Container do Modal principal parecido com o layout da foto */
+.modal-container {
+    background-color: #f8f9fa;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Cabeçalho (Header)
+   ========================================================================== */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.logo-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #12462b; /* Verde escuro institucional */
+}
+
+.btn-close, .btn-help {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #666;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background-color 0.2s;
+}
+
+.btn-help {
+    border: 1.5px solid #ccc;
+    font-size: 0.95rem;
+}
+
+.btn-close:hover, .btn-help:hover {
+    background-color: #f0f0f0;
+}
+
+/* ==========================================================================
+   Conteúdo Central (Main)
+   ========================================================================== */
+.modal-content {
+    padding: 40px 60px;
+    overflow-y: auto;
+    max-height: 75vh;
+}
+
+.instructions {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.instructions h2 {
+    font-size: 1.8rem;
+    color: #222222;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.instructions p {
+    font-size: 0.95rem;
+    color: #666666;
+    max-width: 550px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Estrutura dos Cards de Opções (Radio Customizado)
+   ========================================================================== */
+#form-destino {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Oculta a bolinha padrão do input radio */
+.destination-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* O container visível do card */
+.card-custom-box {
+    display: flex;
+    background-color: #ffffff;
+    border: 1.5px solid #e0e4e2;
+    border-radius: 12px;
+    padding: 24px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Efeito visual quando o card correspondente for SELECIONADO */
+.destination-card input[type="radio"]:checked + .card-custom-box {
+    border-color: #12462b;
+    box-shadow: 0 0 0 2px rgba(18, 70, 43, 0.15);
+    background-color: #fbfdfc;
+}
+
+.destination-card:hover .card-custom-box {
+    border-color: #b5c4bd;
+}
+
+/* Ícones e Textos dos Cards */
+.card-icon {
+    font-size: 1.8rem;
+    margin-right: 20px;
+    margin-top: 2px;
+}
+
+.card-body {
+    flex: 1;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.card-header-row h3 {
+    font-size: 1.25rem;
+    color: #222222;
+    font-weight: 700;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+/* Badges (Etiquetas de Custo e Taxa) */
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.badge.grey {
+    background-color: #f0f2f1;
+    color: #666666;
+}
+
+.badge.orange {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+/* Seções Informativas de Rodapé de Cada Card */
+.card-footer-info {
+    font-size: 0.8rem;
+    color: #666666;
+}
+
+.card-footer-info.highlight {
+    background-color: #f8f9fa;
+    padding: 10px 14px;
+    border-radius: 6px;
+    display: inline-block;
+    width: 100%;
+    color: #444444;
+}
+
+/* Simulador do Mapa da Coleta Seletiva */
+.map-placeholder {
+    background-color: #e5e9e6; 
+    background-image: linear-gradient(45deg, #eef2f0 25%, transparent 25%), 
+                      linear-gradient(-45deg, #eef2f0 25%, transparent 25%);
+    background-size: 20px 20px; /* Textura leve simulando ruas em grid */
+    height: 90px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.map-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    color: #333333;
+}
+
+/* ==========================================================================
+   Rodapé Principal do Modal (Footer)
+   ========================================================================== */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+}
+
+.btn-secondary {
+    background-color: #ffffff;
+    color: #444444;
+    border: 1.5px solid #dcdcdc;
+    padding: 12px 35px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    background-color: #f5f5f5;
+    border-color: #cccccc;
+}
+
+.btn-primary {
+    background-color: #12462b; /* Tom verde idêntico ao da imagem */
+    color: #ffffff;
+    border: none;
+    padding: 12px 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0b2e1c;
+}
