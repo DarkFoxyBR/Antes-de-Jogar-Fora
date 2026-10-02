@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Item - Antes de Jogar Fora</title>
+
+    <!-- Ligação com o CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Script visual da imagem -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho-cadastro">
+
+        <a href="index.html" class="voltar-inicio" aria-label="Voltar para o início">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+
+        <h1>Antes de Jogar Fora</h1>
+
+    </header>
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="pagina-cadastro">
+
+        <!-- TÍTULO -->
+        <section class="titulo-cadastro">
+
+            <h2>Cadastrar Item</h2>
+
+            <p>
+                Forneça os detalhes do item que deseja destinar.
+            </p>
+
+        </section>
+
+
+        <!-- FORMULÁRIO -->
+        <form class="formulario-cadastro">
+
+            <!-- FOTO DO ITEM -->
+            <div class="campo">
+
+                <label for="foto">Fotos do Item</label>
+
+                <label class="area-foto" for="foto">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    <span>Adicionar fotos</span>
+
+                    <small>PNG, JPG, max 5MB</small>
+
+                </label>
+
+                <input
+                    type="file"
+                    id="foto"
+                    accept="image/png, image/jpeg"
+                    hidden
+                >
+
+            </div>
+
+
+            <!-- NOME DO ITEM -->
+            <div class="campo">
+
+                <label for="nome">
+                    Nome do Item
+                </label>
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Ex: Cadeira de Madeira"
+                    required
+                >
+
+            </div>
+
+
+            <!-- CATEGORIA -->
+            <div class="campo">
+
+                <label for="categoria">
+                    Categoria
+                </label>
+
+                <select id="categoria" required>
+
+                    <option value="" selected disabled>
+                        Selecione uma categoria...
+                    </option>
+
+                    <option value="eletronicos">
+                        Eletrônicos
+                    </option>
+
+                    <option value="moveis">
+                        Móveis
+                    </option>
+
+                    <option value="roupas">
+                        Roupas
+                    </option>
+
+                    <option value="livros">
+                        Livros
+                    </option>
+
+                    <option value="brinquedos">
+                        Brinquedos
+                    </option>
+
+                    <option value="outros">
+                        Outros
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- DESCRIÇÃO -->
+            <div class="campo">
+
+                <label for="descricao">
+                    Descrição Breve
+                </label>
+
+                <textarea
+                    id="descricao"
+                    placeholder="Detalhes sobre o item, marcas de uso, etc."
+                    required
+                ></textarea>
+
+            </div>
+
+
+            <!-- ESTADO DE CONSERVAÇÃO -->
+            <div class="campo">
+
+                <label>
+                    Estado de Conservação
+                </label>
+
+                <div class="opcoes-estado">
+
+                    <input
+                        type="radio"
+                        name="estado"
+                        id="novo"
+                        value="Novo/Sem Uso"
+                    >
+
+                    <label for="novo" class="estado">
+                        Novo/Sem Uso
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        name="estado"
+                        id="bom"
+                        value="Bom (Marcas leves)"
+                        checked
+                    >
+
+                    <label for="bom" class="estado">
+                        Bom (Marcas leves)
+                    </label>
+
+
+                    <input
+                        type="radio"
+                        name="estado"
+                        id="reparo"
+                        value="Precisa Reparo"
+                    >
+
+                    <label for="reparo" class="estado">
+                        Precisa Reparo
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- LINHA SEPARADORA -->
+            <div class="linha"></div>
+
+
+            <!-- BOTÃO -->
+            <a href="destino.html" class="botao-proximo">
+
+                Próximo Passo
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </form>
+
+    </main>
+
+</body>
+
+</html>

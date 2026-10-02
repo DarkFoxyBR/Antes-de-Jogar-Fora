@@ -6,7 +6,7 @@
     <title>Escolha o Destino</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="destino-page">
 
     <div class="modal-container">
         <!-- CABEÇALHO DA MODAL -->
@@ -24,7 +24,7 @@
             </div>
 
             <!-- FORMULÁRIO COM OS CARDS DE SELEÇÃO -->
-            <form action="#" method="POST" id="form-destino">
+            <form action="confirmacao.html" method="POST" id="form-destino">
                 
                 <!-- CARD 1: DOAR -->
                 <label class="destination-card" for="donate">
@@ -56,7 +56,7 @@
                             </div>
                             <p>Recupere parte do valor investido. O processo é rápido, seguro e gerenciamos todo o pagamento para você.</p>
                             <div class="card-footer-info highlight">
-                                <span>💰 O valor médio de venda para itens similares é de R$ 150 - R$ 300.</span>
+                                <span>💰 O valor médio de venda para itens similares é de R$ 10 - R$ 5000.</span>
                             </div>
                         </div>
                     </div>
@@ -87,8 +87,8 @@
 
         <!-- RODAPÉ DE AÇÕES -->
         <footer class="modal-footer">
-            <button type="button" class="btn-secondary" onclick="window.history.back()">Voltar</button>
-            <button type="submit" form="form-destino" class="btn-primary">Continuar ➔</button>
+            <a href="cadastro1.html" class="btn-secondary">Voltar</a>
+            <a href="confirmacao.html" class="btn-primary">Continuar ➔</a>
         </footer>
     </div>
 
