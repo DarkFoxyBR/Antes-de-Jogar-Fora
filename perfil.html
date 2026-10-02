@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Antes de Jogar Fora</title>
+    <link rel="stylesheet" href="perfil.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="cabecalho">
+    <a href="index.html" class="logo">
+        <i class="fa-solid fa-recycle"></i>
+        <span>Antes de Jogar Fora</span>
+    </a>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="cadastro1.html">Cadastrar Item</a>
+        <a href="perfil.html" class="ativo">Perfil</a>
+    </nav>
+</header>
+
+<main class="pagina-perfil">
+
+    <section class="topo-perfil">
+        <div class="foto-perfil-area">
+            <div class="foto-perfil" id="fotoPerfil">
+                <i class="fa-solid fa-user"></i>
+            </div>
+
+            <label for="fotoInput" class="botao-foto">
+                <i class="fa-solid fa-camera"></i>
+                Alterar foto
+            </label>
+
+            <input type="file" id="fotoInput" accept="image/png, image/jpeg" hidden>
+        </div>
+
+        <div class="dados-principais">
+            <h1 id="nomeExibido">Seu Nome</h1>
+            <p><i class="fa-solid fa-location-dot"></i> Extremoz, RN</p>
+            <p class="descricao-perfil">
+                Meu perfil no Antes de Jogar Fora
+            </p>
+        </div>
+
+        <button class="botao-editar" id="botaoEditar">
+            <i class="fa-solid fa-pen"></i>
+            Editar perfil
+        </button>
+    </section>
+
+    <section class="conteudo-perfil">
+
+        <div class="coluna-principal">
+
+            <div class="cartao">
+                <div class="titulo-cartao">
+                    <h2><i class="fa-solid fa-user"></i> Dados pessoais</h2>
+                </div>
+
+                <form id="formPerfil">
+
+                    <div class="grupo-campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" value="Seu Nome" disabled>
+                    </div>
+
+                    <div class="linha-campos">
+                        <div class="grupo-campo">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email"
+                                   placeholder="seuemail@email.com" disabled>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="telefone">Telefone</label>
+                            <input type="tel" id="telefone"
+                                   placeholder="(84) 99999-9999" disabled>
+                        </div>
+                    </div>
+
+                    <div class="linha-campos">
+                        <div class="grupo-campo">
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade"
+                                   value="Extremoz" disabled>
+                        </div>
+
+                        <div class="grupo-campo">
+                            <label for="estado">Estado</label>
+                            <input type="text" id="estado"
+                                   value="RN" disabled>
+                        </div>
+                    </div>
+
+                    <div class="acoes-formulario" id="acoesFormulario">
+                        <button type="submit" class="botao-salvar">
+                            <i class="fa-solid fa-check"></i>
+                            Salvar alterações
+                        </button>
+                        <button type="button" class="botao-cancelar" id="botaoCancelar">
+                            Cancelar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="cartao">
+                <div class="titulo-cartao">
+                    <div>
+                        <h2><i class="fa-solid fa-box"></i> Meus itens</h2>
+                        <p>Itens que você cadastrou no site.</p>
+                    </div>
+                    <a href="cadastro1.html" class="botao-pequeno">
+                        <i class="fa-solid fa-plus"></i> Cadastrar item
+                    </a>
+                </div>
+
+                <div class="resumo-itens">
+                    <div class="resumo">
+                        <strong>0</strong>
+                        <span>Itens cadastrados</span>
+                    </div>
+
+                    <div class="resumo">
+                        <strong>0</strong>
+                        <span>Doações</span>
+                    </div>
+
+                    <div class="resumo">
+                        <strong>0</strong>
+                        <span>Vendas</span>
+                    </div>
+
+                    <div class="resumo">
+                        <strong>0</strong>
+                        <span>Reciclagens</span>
+                    </div>
+                </div>
+
+                <div class="sem-itens">
+                    <i class="fa-solid fa-box-open"></i>
+                    <h3>Nenhum item cadastrado</h3>
+                    <p>Quando você cadastrar um item, ele aparecerá aqui.</p>
+                    <a href="cadastro1.html">Cadastrar meu primeiro item</a>
+                </div>
+            </div>
+
+        </div>
+
+        <aside class="coluna-lateral">
+
+            <div class="cartao">
+                <div class="titulo-cartao">
+                    <h2><i class="fa-solid fa-gear"></i> Configurações</h2>
+                </div>
+
+                <div class="opcao-config">
+                    <div>
+                        <strong>Notificações</strong>
+                        <p>Receber avisos sobre seus itens</p>
+                    </div>
+                    <label class="interruptor">
+                        <input type="checkbox" id="notificacoes" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+                <div class="opcao-config">
+                    <div>
+                        <strong>Perfil público</strong>
+                        <p>Permitir que outros usuários vejam seu perfil</p>
+                    </div>
+                    <label class="interruptor">
+                        <input type="checkbox" id="perfilPublico" checked>
+                        <span></span>
+                    </label>
+                </div>
+
+                <button class="opcao-link" id="alterarSenha">
+                    <span>
+                        <i class="fa-solid fa-lock"></i>
+                        Alterar senha
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <button class="opcao-link" id="sairConta">
+                    <span class="texto-sair">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Sair da conta
+                    </span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+            <div class="cartao seguranca">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h3>Segurança</h3>
+                    <p>
+                        Não compartilhe sua senha ou dados pessoais com outras pessoas.
+                    </p>
+                </div>
+            </div>
+
+        </aside>
+
+    </section>
+</main>
+
+<footer class="rodape">
+    <p>© 2026 Antes de Jogar Fora</p>
+</footer>
+
+<script src="perfil.js"></script>
+</body>
+</html>

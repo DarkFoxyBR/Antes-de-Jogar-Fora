@@ -1,0 +1,555 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8f6;
+    color: #263238;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input {
+    font-family: inherit;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    min-height: 70px;
+    padding: 0 7%;
+    background: #ffffff;
+    border-bottom: 1px solid #e7e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #2e7d32;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo i {
+    font-size: 23px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.menu a {
+    color: #4f5b60;
+    font-size: 15px;
+    padding: 25px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    color: #2e7d32;
+    border-bottom-color: #2e7d32;
+}
+
+/* PÁGINA */
+
+.pagina-perfil {
+    width: min(1150px, 90%);
+    margin: 35px auto 60px;
+}
+
+/* TOPO DO PERFIL */
+
+.topo-perfil {
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    padding: 28px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 24px;
+}
+
+.foto-perfil-area {
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.foto-perfil {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: #e8f5e9;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.foto-perfil i {
+    font-size: 42px;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.botao-foto {
+    display: inline-block;
+    margin-top: 9px;
+    color: #2e7d32;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dados-principais {
+    flex: 1;
+}
+
+.dados-principais h1 {
+    font-size: 26px;
+    margin-bottom: 9px;
+}
+
+.dados-principais p {
+    color: #657177;
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.dados-principais p i {
+    color: #2e7d32;
+    margin-right: 5px;
+}
+
+.descricao-perfil {
+    margin-top: 12px !important;
+}
+
+.botao-editar,
+.botao-salvar,
+.botao-cancelar,
+.botao-pequeno {
+    border: 0;
+    border-radius: 9px;
+    padding: 11px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.botao-editar,
+.botao-salvar,
+.botao-pequeno {
+    background: #2e7d32;
+    color: white;
+}
+
+.botao-editar:hover,
+.botao-salvar:hover,
+.botao-pequeno:hover {
+    background: #256628;
+}
+
+.botao-editar i,
+.botao-salvar i,
+.botao-pequeno i {
+    margin-right: 6px;
+}
+
+/* CONTEÚDO */
+
+.conteudo-perfil {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+    gap: 24px;
+}
+
+.coluna-principal,
+.coluna-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.cartao {
+    background: #ffffff;
+    border: 1px solid #e7e7e7;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.titulo-cartao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.titulo-cartao h2 {
+    font-size: 19px;
+}
+
+.titulo-cartao h2 i {
+    color: #2e7d32;
+    margin-right: 8px;
+}
+
+.titulo-cartao p {
+    color: #778187;
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+/* FORMULÁRIO */
+
+.grupo-campo {
+    margin-bottom: 18px;
+    flex: 1;
+}
+
+.linha-campos {
+    display: flex;
+    gap: 16px;
+}
+
+.grupo-campo label {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.grupo-campo input {
+    width: 100%;
+    height: 43px;
+    border: 1px solid #d8dfe1;
+    border-radius: 8px;
+    padding: 0 13px;
+    outline: none;
+    background: #fafafa;
+    color: #263238;
+}
+
+.grupo-campo input:not(:disabled):focus {
+    border-color: #2e7d32;
+    background: #ffffff;
+}
+
+.grupo-campo input:disabled {
+    color: #687277;
+    cursor: not-allowed;
+}
+
+.acoes-formulario {
+    display: none;
+    gap: 10px;
+    margin-top: 4px;
+}
+
+.acoes-formulario.visivel {
+    display: flex;
+}
+
+.botao-cancelar {
+    background: #eeeeee;
+    color: #424242;
+}
+
+/* RESUMO DOS ITENS */
+
+.resumo-itens {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.resumo {
+    background: #f5f8f5;
+    border-radius: 10px;
+    padding: 16px 10px;
+    text-align: center;
+}
+
+.resumo strong {
+    display: block;
+    color: #2e7d32;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.resumo span {
+    color: #697378;
+    font-size: 12px;
+}
+
+.sem-itens {
+    text-align: center;
+    padding: 38px 20px 20px;
+    color: #697378;
+}
+
+.sem-itens > i {
+    color: #9aa4a8;
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.sem-itens h3 {
+    color: #37474f;
+    font-size: 16px;
+    margin-bottom: 7px;
+}
+
+.sem-itens p {
+    font-size: 13px;
+    margin-bottom: 14px;
+}
+
+.sem-itens a {
+    color: #2e7d32;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* CONFIGURAÇÕES */
+
+.opcao-config {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.opcao-config strong {
+    font-size: 14px;
+}
+
+.opcao-config p {
+    color: #788288;
+    font-size: 12px;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+/* INTERRUPTOR */
+
+.interruptor {
+    position: relative;
+    width: 42px;
+    height: 23px;
+    flex-shrink: 0;
+}
+
+.interruptor input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.interruptor span {
+    position: absolute;
+    inset: 0;
+    background: #cfd5d7;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.interruptor span::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    left: 3px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.interruptor input:checked + span {
+    background: #2e7d32;
+}
+
+.interruptor input:checked + span::before {
+    transform: translateX(19px);
+}
+
+/* LINKS DE CONFIGURAÇÃO */
+
+.opcao-link {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #eeeeee;
+    background: transparent;
+    padding: 17px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    color: #37474f;
+    font-size: 14px;
+    text-align: left;
+}
+
+.opcao-link i:first-child {
+    color: #2e7d32;
+    margin-right: 9px;
+}
+
+.opcao-link > i {
+    color: #9aa4a8;
+    font-size: 12px;
+}
+
+.opcao-link:hover {
+    color: #2e7d32;
+}
+
+.texto-sair {
+    color: #c62828;
+}
+
+/* SEGURANÇA */
+
+.seguranca {
+    display: flex;
+    gap: 13px;
+    background: #f1f8f2;
+    border-color: #dcecdf;
+}
+
+.seguranca > i {
+    color: #2e7d32;
+    font-size: 22px;
+}
+
+.seguranca h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.seguranca p {
+    color: #667277;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    text-align: center;
+    padding: 25px;
+    color: #7a8589;
+    font-size: 12px;
+}
+
+/* MENSAGENS */
+
+.mensagem-perfil {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #263238;
+    color: #ffffff;
+    padding: 13px 17px;
+    border-radius: 9px;
+    font-size: 13px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    z-index: 20;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 850px) {
+    .conteudo-perfil {
+        grid-template-columns: 1fr;
+    }
+
+    .topo-perfil {
+        flex-wrap: wrap;
+    }
+
+    .botao-editar {
+        margin-left: 127px;
+    }
+}
+
+@media (max-width: 650px) {
+    .cabecalho {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .menu a {
+        padding: 8px 0;
+    }
+
+    .pagina-perfil {
+        width: 94%;
+        margin-top: 20px;
+    }
+
+    .topo-perfil {
+        padding: 20px;
+    }
+
+    .dados-principais {
+        min-width: calc(100% - 130px);
+    }
+
+    .botao-editar {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .linha-campos {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .resumo-itens {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .titulo-cartao {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .botao-pequeno {
+        width: 100%;
+        text-align: center;
+    }
+}
