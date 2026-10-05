@@ -37,7 +37,7 @@ input {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #2e7d32;
+    color: #05614b;
     font-weight: bold;
     font-size: 18px;
 }
@@ -61,8 +61,8 @@ input {
 
 .menu a:hover,
 .menu a.ativo {
-    color: #2e7d32;
-    border-bottom-color: #2e7d32;
+    color: #266610;
+    border-bottom-color: #01de84;
 }
 
 /* PÁGINA */
@@ -95,7 +95,7 @@ input {
     height: 105px;
     border-radius: 50%;
     background: #e8f5e9;
-    color: #2e7d32;
+    color: #266610;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +117,7 @@ input {
 .botao-foto {
     display: inline-block;
     margin-top: 9px;
-    color: #2e7d32;
+    color: #266610;
     font-size: 12px;
     cursor: pointer;
 }
@@ -138,7 +138,7 @@ input {
 }
 
 .dados-principais p i {
-    color: #2e7d32;
+    color: #266610;
     margin-right: 5px;
 }
 
@@ -161,14 +161,14 @@ input {
 .botao-editar,
 .botao-salvar,
 .botao-pequeno {
-    background: #2e7d32;
+    background: #05614b;
     color: white;
 }
 
 .botao-editar:hover,
 .botao-salvar:hover,
 .botao-pequeno:hover {
-    background: #256628;
+    background: #266610;
 }
 
 .botao-editar i,
@@ -212,7 +212,7 @@ input {
 }
 
 .titulo-cartao h2 i {
-    color: #2e7d32;
+    color: #266610;
     margin-right: 8px;
 }
 
@@ -253,7 +253,7 @@ input {
 }
 
 .grupo-campo input:not(:disabled):focus {
-    border-color: #2e7d32;
+    border-color: #01de84;
     background: #ffffff;
 }
 
@@ -294,7 +294,7 @@ input {
 
 .resumo strong {
     display: block;
-    color: #2e7d32;
+    color: #05614b;
     font-size: 22px;
     margin-bottom: 5px;
 }
@@ -328,7 +328,7 @@ input {
 }
 
 .sem-itens a {
-    color: #2e7d32;
+    color: #05614b;
     font-size: 13px;
     font-weight: bold;
 }
@@ -417,7 +417,7 @@ input {
 }
 
 .opcao-link i:first-child {
-    color: #2e7d32;
+    color: #05614b;
     margin-right: 9px;
 }
 
@@ -427,7 +427,7 @@ input {
 }
 
 .opcao-link:hover {
-    color: #2e7d32;
+    color: #266610;
 }
 
 .texto-sair {
@@ -444,7 +444,7 @@ input {
 }
 
 .seguranca > i {
-    color: #2e7d32;
+    color: #266610;
     font-size: 22px;
 }
 
